@@ -1,0 +1,19 @@
+name: Tu dong cap nhat Docker
+
+# Kích hoạt chuỗi hành động bất cứ khi nào có hành động đẩy mã nguồn (Push) lên nhánh main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # Chỉ định kịch bản này sẽ thực thi trực tiếp trên con robot chạy ngầm đặt ở máy ảo của bạn
+    runs-on: self-hosted
+
+    steps:
+      - name: Chay lenh cap nhat code va build Docker
+        run: |
+          cd /home/dtd/docker-web
+          git pull origin main
+          docker compose up -d --build
