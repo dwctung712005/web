@@ -71,7 +71,7 @@ $users = $conn->query("SELECT * FROM users ORDER BY id DESC");
 
 <div class="container py-5">
     <div class="text-center mb-5">
-        <h1 class="fw-bold text-primary">Hệ Thống Quản Lý Thành Viên!</h1>
+        <h1 class="fw-bold text-primary">Hệ Thống Quản Lý Thành Viên.</h1>
         <p class="text-muted">CRUD PHP thuần kết nối hệ quản trị cơ sở dữ liệu MySQL</p>
     </div>
 
